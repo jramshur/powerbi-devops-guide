@@ -1,0 +1,6 @@
+*.abf
+*.mbr
+*.cache
+*.pbix
+localSettings.json
+unappliedChanges.json
