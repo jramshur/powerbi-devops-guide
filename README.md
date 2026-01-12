@@ -1,35 +1,31 @@
-# Power BI Desktop + Local Git Documentation
+# Power BI DevOps Guide
 
-Welcome! This documentation helps Power BI developers adopt professional version control practices using **Power BI Projects (PBIP)** and **Local Git**.
+> **A comprehensive guide to professional engineering workflows for Power BI.**
+> *Source Control. CI/CD strategies. Developer Discipline.*
 
-No Azure DevOps or GitHub Enterprise required—just you, VS Code, and Power BI Desktop.
+Welcome! This repository documents the modern "Code-First" approach to Power BI development, moving beyond the "Save As" chaos of single PBIX files.
 
-## Key Documents
+## 📚 The Handbook
 
-### 1. [The Guide (`powerbi-git-guide.md`)](./powerbi-git-guide.md)
-**Start here.** A comprehensive narrative on:
-- How PBIP changes the game.
-- Setting up your repo and `.gitignore`.
-- The "Three Edit Loops" (Desktop, Code, AI).
-- Why `git worktree` is essential for safe Power BI workflows.
-- Merging and Promotion strategies.
+All documentation is located in the **[`docs/`](./docs/)** directory.
 
-### 2. [Git Basics Deep Dive (`git-basics-deep-dive.md`)](./git-basics-deep-dive.md)
-**New to Git?** Start here.
-- Plain English explanations of Commit, Branch, Merge.
-- Why we recommend "Feature Branching" for Power BI.
-- How to use `git worktree` to work on **parallel** branches avoiding file locking issues.
+### 🏁 Getting Started
+- **[Setup & Installation](./docs/01-setup.md)**: Prerequisites, VS Code setup, and the critical `.gitignore`.
+- **[Git Concepts for Power BI](./docs/02-git-concepts.md)**: A primer on Commits, Branches, and why "Feature Branching" is safer than "Shared Folder" editing.
 
-### 3. [The Cheat Sheet (`powerbi-git-cheatsheet.md`)](./powerbi-git-cheatsheet.md)
-**Keep this open.** Quick reference for:
-- Golden Rules of PBIP + Git.
-- Essential copy-paste Git commands.
-- Checklists for Committing and Deploying.
-- Rapid troubleshooting table.
+### 🛠️ Daily Workflow
+- **[Developer Workflow](./docs/03-workflow.md)**: The "Three Edit Loops" (Desktop, Code, Copilot) and how to use key features like **Git Worktrees**.
+- **[Cheat Sheet](./docs/cheatsheet.md)**: Quick reference commands and troubleshooting tips.
 
-## Quick Start Summary
-1.  Enable **Power BI Project (.pbip)** save option in Desktop preview features.
-2.  Initialize a local git repo (`git init`).
-3.  Add the recommended **.gitignore**.
-4.  Save your report as a **Project (PBIP)**.
-5.  Use **VS Code** to manage commits and branches.
+### 🚀 Deployment & Operations
+- **[Deployment Strategy](./docs/04-deployment.md)**: How to safely promote code from DEV to PROD using Power BI Deployment Pipelines.
+
+## Why this exists?
+
+Power BI has historically been a "low-code" tool, but managing it at scale requires "high-code" discipline. With the release of **PBIP (Power BI Project)** format, we can finally treat reports and datasets as true software projects.
+
+**This guide aims to solve:**
+- "Who changed the data model?"
+- "I can't open the file because Dave has it open."
+- " How do we roll back to last week's version?"
+- "We broke production and don't know why."

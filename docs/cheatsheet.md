@@ -1,7 +1,7 @@
 # Power BI + Git: The Cheat Sheet
 
 ## Golden Rules
-**Need the basics?** Read our [Git Basics Deep Dive](./git-basics-deep-dive.md).
+**Need the basics?** Read our [Git Basics Deep Dive](./02-git-concepts.md).
 
 1.  **Never commit cache.** Ensure `.gitignore` blocks `*.abf`, `*.cache`, `*.pbix`.
 2.  **One Branch, One Desktop Instance.** Never switch Git branches in a folder while Power BI Desktop has that folder open.
