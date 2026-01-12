@@ -18,7 +18,7 @@ No Azure DevOps or GitHub Enterprise required—just you, VS Code, and Power BI 
 **New to Git?** Start here.
 - Plain English explanations of Commit, Branch, Merge.
 - Why we recommend "Feature Branching" for Power BI.
-- How to use `git worktree` to work on parallels branches avoiding file locking issues.
+- How to use `git worktree` to work on **parallel** branches avoiding file locking issues.
 
 ### 3. [The Cheat Sheet (`powerbi-git-cheatsheet.md`)](./powerbi-git-cheatsheet.md)
 **Keep this open.** Quick reference for:

@@ -28,26 +28,73 @@ Everyone edits the same `Sales.pbix` file.
 
 ### The "Trunk-Based" Method (Advanced)
 Everyone pushes directly to `main` every few hours.
-*   **Result**: Hard for Power BI because you might break the report for everyone while you are halfway through a measure.
-
-### The "Feature Branch" Method (Recommended)
-You want to add a "Year to Date" page?
-1.  Create a branch: `feature/ytd-page`.
-2.  Do all your work there. Break things. Fix things.
-3.  When it's perfect, **Merge** it back to `main`.
 
 ```mermaid
 gitGraph
    commit id: "Initial"
-   commit id: "Base Report"
-   branch feature/ytd
-   checkout feature/ytd
-   commit id: "Add Visuals"
-   commit id: "Fix DAX"
-   checkout main
-   merge feature/ytd id: "Merge YTD" type: NORMAL
+   commit id: "Dev A Change"
+   commit id: "Dev B Change"
+   commit id: "Dev A Fix"
    commit id: "Deploy"
 ```
+*   **Result**: Hard for Power BI because you might break the report for everyone while you are halfway through a measure.
+
+### The "Feature Branch" Method (Recommended)
+
+#### Level 1: The Basic Workflow
+This is where you should start. You simply want to work on a new feature without risking the working report.
+
+1.  **Start on Main**: Generally safe and deployable.
+2.  **Branch Out**: Create `feature/ytd-page`.
+3.  **Work**: Do all your messy work here. If you break it, `main` is still safe.
+4.  **Merge**: When perfect, bring it back to `main`.
+
+```mermaid
+gitGraph
+   commit id: "Initial v1.0"
+   branch feature/ytd
+   checkout feature/ytd
+   commit id: "Add YTD Page"
+   commit id: "Fix Formatting"
+   checkout main
+   merge feature/ytd id: "New Version v1.1"
+```
+
+#### Level 2: Real World Scenario (Parallel Work & Critical Fixes)
+Once you master the basics, here is why Feature Branching is a superpower for teams.
+
+Imagine you are building "YTD Page" (taking 2 weeks), your colleague is building "KPI Card" (taking 3 days), and suddenly a critical bug is found in PROD.
+
+```mermaid
+gitGraph
+   commit id: "Initial v1.0"
+   
+   branch feature/ytd
+   checkout feature/ytd
+   commit id: "Start YTD"
+   
+   branch feature/kpi
+   checkout feature/kpi
+   commit id: "Start KPI"
+   
+   checkout main
+   branch hotfix/typo
+   checkout hotfix/typo
+   commit id: "Fix Formula"
+   checkout main
+   merge hotfix/typo id: "Deploy Fix v1.0.1" tag: "v1.0.1"
+   
+   checkout feature/ytd
+   commit id: "Finish YTD"
+   
+   checkout feature/kpi
+   commit id: "Finish KPI"
+   checkout main
+   merge feature/kpi id: "Deploy KPI"
+   merge feature/ytd id: "Deploy YTD v1.1" tag: "v1.1"
+```
+
+*   **Key Takeaway**: The "Fix Formula" hotfix went to PROD *immediately*, without waiting for the unfinished "YTD" or "KPI" work. This is impossible with a single shared PBIX file.
 
 ---
 

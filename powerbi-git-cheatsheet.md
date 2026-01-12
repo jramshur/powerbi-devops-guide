@@ -6,7 +6,7 @@
 1.  **Never commit cache.** Ensure `.gitignore` blocks `*.abf`, `*.cache`, `*.pbix`.
 2.  **One Branch, One Desktop Instance.** Never switch Git branches in a folder while Power BI Desktop has that folder open.
 3.  **Worktrees > Branch Switching.** Use `git worktree` to work on multiple branches in parallel folders.
-4.  **Re-open after External Edits.** If you edit TMDL/JSON in VS Code, you crucial MUST restart Power BI Desktop to see changes.
+4.  **Re-open after External Edits.** If you edit TMDL/JSON in VS Code, you MUST restart Power BI Desktop to see changes.
 5.  **Save in Desktop after Agent Edits.** If an MCP agent updates your model, click SAVE in Desktop to write changes to disk before committing.
 
 ## Git Command Reference

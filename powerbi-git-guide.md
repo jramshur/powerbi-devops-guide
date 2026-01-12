@@ -32,7 +32,7 @@ Stop thinking "one file." Start thinking "Repository."
 /my-analytics-repo
 ├── .gitignore              <-- The most important file
 ├── README.md               <-- Documentation
-└──src/
+└── src/
    ├── Sales.Report/        <-- PBIP Folder
    └── Sales.Dataset/       <-- PBIP Folder
 ```
@@ -117,18 +117,24 @@ Modern Power BI development isn't just "Clicking in Desktop" anymore.
 3.  Save files.
 4.  Open Power BI Desktop (Changes load on startup).
 
-### Loop C: AI-First (MCP Agent)
-*Best for: "Create 10 measures", "Document my model".*
-**What is this?** An "MCP Server" is a bridge that lets an AI (like Claude or ChatGPT) talk directly to the Power BI engine running on your machine.
-**Pros**: Magic. Agent interacts with the live model in memory.
-**Cons**: Danger of "Ghost Code" (In memory but not on disk).
+### Loop C: AI-First (Copilot & Agents)
+*Best for: "Create 10 measures", "Document my model", "Refactor DAX".*
+**What is this?** Using **VS Code Copilot** or advanced agents (like MCP servers) to interact directly with your code.
+**Pros**: Speed. Copilot can generate DAX patterns instantly in your .tmdl files.
+**Cons**: Power BI Desktop does NOT "watch" files. It won't see your changes until you reload.
 
-**Workflow**:
-1.  Helper Agent connects to your *running* Desktop session.
+**Workflow (VS Code Copilot)**:
+1.  **Close Power BI Desktop**.
+2.  Open your PBIP folder in VS Code.
+3.  Ask Copilot: *"Create a measure for YTD Sales in the Sales table"*.
+4.  Copilot writes the TMDL code.
+5.  **Open Power BI Desktop** to verify.
+
+**Workflow (MCP Advanced)**:
+1.  Helper Agent connects to your *running* Desktop session (via local tools).
 2.  Agent sends DAX/TMSL commands directly to the engine.
-3.  **Visual Verification**: You see the measures appear instantly in your open Desktop window.
-4.  **CRITICAL STEP**: Click **Save** in Power BI Desktop.
-    *   *Why?* The Agent updated the *Memory*. Clicking Save writes Memory -> *Disk*.
+3.  **Visual Verification**: You see the measures appear instantly.
+4.  **CRITICAL STEP**: Click **Save** in Power BI Desktop to write changes to disk.
 5.  Commit in Git.
 
 ---
