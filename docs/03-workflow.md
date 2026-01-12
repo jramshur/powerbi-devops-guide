@@ -27,7 +27,7 @@ Modern Power BI development isn't just "Clicking in Desktop" anymore. You have t
 > **Warning**: Power BI Desktop does not "watch" files. If you edit a file while Desktop is open, your changes will be ignored (or overwritten) when you next save in Desktop.
 
 ### Loop C: AI-First (Copilot & Agents)
-*Best for: "Create 10 measures", "Document my model", generating DAX patterns.*
+*Best for: "Create 10 measures", "Document my model", generating DAX patterns. (See [AI-Assisted Development](./05-ai-workflow.md))*
 
 **Workflow**:
 1.  **Close Power BI Desktop**.

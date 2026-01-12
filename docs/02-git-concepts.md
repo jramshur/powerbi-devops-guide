@@ -152,9 +152,16 @@ git worktree remove ../feature-ytd
 
 ## 4. Tools for the "No-Code" User
 
-You don't *have* to use VS Code. While VS Code is best for editing the text files, you can use other tools just for the "Git" part.
+You don't *have* to use VS Code. While VS Code is best for editing the text files, you can use other tools just for the "Git" part. However, VS Code itself has excellent built-in Git support.
 
-### GitHub Desktop
+### Visual Studio Code (Recommended)
+VS Code isn't just for code; it's a full Git GUI.
+*   **Source Control Tab**: The "Branch" icon on the left sidebar shows all changes.
+*   **Stage & Commit**: You can `+` (stage) files and type a message to commit directly in the UI.
+*   **Sync**: The "Sync Changes" button handles Pull and Push for you.
+*   **Pros**: You are already there editing files. Great diff viewer for text files.
+
+### GitHub Desktop (Simpler to use Option)
 A friendly, visual app.
 *   **Pros**: click buttons to Commit, Branch, and Undo. Visual diffs.
 *   **Cons**: Doesn't support `git worktree` natively (you have to use command line for that).
@@ -165,3 +172,7 @@ Powerful visual Git clients.
 
 ### The Command Line (PowerShell)
 The universal language. If you learn the 5 commands in the Cheat Sheet, you can work on any machine, anywhere.
+
+## 5. Further Reading
+
+For a deeper dive into these concepts, check out the videos and articles in **[Useful Resources](./resources.md)**.

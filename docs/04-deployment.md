@@ -59,3 +59,7 @@ Instead of you clicking "Publish", a script does it for you.
 - **Consistency**: No accidental "oops, I published to the wrong workspace."
 
 *If you are interested in this, search for "Power BI Fabric Git Integration" or "Power BI CI/CD with Azure DevOps".*
+
+## 5. Further Reading
+
+See **[Useful Resources](./resources.md)** for official documentation on Fabric Git Integration and Deployment Pipelines.

@@ -80,3 +80,7 @@ Thumbs.db
 - **Pain**: Two people moved the same visual, or changed the same bookmark.
 - **Real Talk**: JSON merging for reports is difficult.
 - **Fix**: Pick "Their Version" or "My Version" completely (don't try to merge lines). Then manually re-do the missing small change in Desktop.
+
+## 5. Further Reading
+
+For more external resources, articles, and videos, see **[Useful Resources](./resources.md)**.

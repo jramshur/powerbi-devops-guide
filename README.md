@@ -16,9 +16,13 @@ All documentation is located in the **[`docs/`](./docs/)** directory.
 ### 🛠️ Daily Workflow
 - **[Developer Workflow](./docs/03-workflow.md)**: The "Three Edit Loops" (Desktop, Code, Copilot) and how to use key features like **Git Worktrees**.
 - **[Cheat Sheet](./docs/cheatsheet.md)**: Quick reference commands and troubleshooting tips.
+- **[AI-Assisted Development](./docs/05-ai-workflow.md)**: How to use Copilot and AI tools for faster, cleaner DAX/TMDL.
 
 ### 🚀 Deployment & Operations
 - **[Deployment Strategy](./docs/04-deployment.md)**: How to safely promote code from DEV to PROD using Power BI Deployment Pipelines.
+
+### 📖 Reference
+- **[Useful Resources](./docs/resources.md)**: A collection of articles, videos, and official documentation.
 
 ## Why this exists?
 
