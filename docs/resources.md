@@ -33,3 +33,20 @@ This document captures useful online resources and documents related to Power BI
 ## Best Practices
 
 - [Power BI Development Pipeline Best Practices](https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/best-practices-cicd) - Microsoft Fabric/Power BI guidance.
+
+## AI & Advanced Integrations
+
+- [AI Agents that work with Power BI Semantic Model & MCP Servers](https://tabulareditor.com/blog/ai-agents-that-work-with-power-bi-semantic-model-mcp-servers) - Tabular Editor Blog.
+- [AI Agents that work with TMDL files](https://tabulareditor.com/blog/ai-agents-that-work-with-tmdl-files) - Tabular Editor Blog (Agentic development with Claude Code).
+- [Introducing AI and Agentic Development for Business Intelligence](https://www.sqlbi.com/articles/introducing-ai-and-agentic-development-for-business-intelligence/) - SQLBI Article.
+- [Power BI Modeling MCP Server Step-by-Step Implementation Guide](https://medium.com/@michael.hannecke/power-bi-modeling-mcp-server-step-by-step-implementation-guide-b7209d6d2506) - Medium Guide by Michael Hannecke.
+- [The Hidden Cost of MCPs and Custom Instructions](https://selfservicebi.co.uk/analytics%20edge/improve%20the%20experience/2025/11/23/the-hidden-cost-of-mcps-and-custom-instructions-on-your-context-window.html) - Analysis on Context Window Costs.
+- [Awesome Copilot: Power BI Development](https://github.com/github/awesome-copilot/blob/main/collections/power-bi-development.md) - GitHub Collection of Copilot resources for Power BI.
+- [VS Code Copilot: Use an AGENTS.md file](https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_use-an-agentsmd-file-experimental) - Official VS Code documentation on experimental Agents support.
+- [Local Template: AGENTS.md](../templates/AGENTS.md) - A ready-to-use template for Power BI projects available in this repository.
+
+## Coding Standards & Best Practices
+
+- [Power Query Best Practices](https://learn.microsoft.com/en-us/power-query/best-practices) - Official Microsoft Guide.
+- [Power BI Guidance Documentation](https://learn.microsoft.com/en-us/power-bi/guidance/) - Official Microsoft Guidance including Data Modeling and DAX.
+- [DAX Best Practices](https://learn.microsoft.com/en-us/power-bi/guidance/dax-overview) - Part of the official guidance.

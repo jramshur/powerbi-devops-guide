@@ -26,14 +26,28 @@ Modern Power BI development isn't just "Clicking in Desktop" anymore. You have t
 
 > **Warning**: Power BI Desktop does not "watch" files. If you edit a file while Desktop is open, your changes will be ignored (or overwritten) when you next save in Desktop.
 
-### Loop C: AI-First (Copilot & Agents)
-*Best for: "Create 10 measures", "Document my model", generating DAX patterns. (See [AI-Assisted Development](./05-ai-workflow.md))*
+### Loop C: AI-Assisted
+*Best for: accelerating development, bulk changes, and solving complex DAX problems.*
 
-**Workflow**:
-1.  **Close Power BI Desktop**.
-2.  In VS Code, ask Copilot: *"Create a measure for YTD Sales in the Sales table"*.
-3.  Copilot writes the TMDL code directly to the file.
-4.  **Open Power BI Desktop** to verify and test.
+There are three primary ways to leverage AI in your Power BI workflow. (See [AI-Assisted Development](./05-ai-workflow.md) for deep dives).
+
+#### 1. AI within VS Code (No MCP)
+**The "Text-Based Agent" Approach.**
+You use GitHub Copilot Chat (including `@workspace` agents) to generate DAX or TMDL. The AI analyzes your file contents as text to understand your project.
+*   **Best for**: Writing DAX patterns, explaining code logic, and generating documentation based on file context.
+*   **Workflow**: Chat with Copilot -> it reads your open files -> applies changes directly to your code (or you copy/paste).
+
+#### 2. AI within VS Code (With Power BI MCP)
+**The "Model-Connected" Approach.**
+You use the **Model Context Protocol (MCP)** to give the AI a direct connection to the *running* Power BI internal engine. It doesn't just read code; it inspects the actual metadata via client tools.
+*   **Best for**: Deep model refactoring, validating relationships, and automated architectural changes.
+*   **Workflow**: Agent connects to server -> Agent queries model metadata -> Agent proposes changes.
+
+#### 3. Copilot built into Power BI
+**The "Native" Approach.**
+You use the official Copilot features inside Power BI Desktop or the Service.
+*   **Best for**: Business users, generating visuals, summarizing report pages, and quick DAX in the formula bar.
+*   **Workflow**: Click the Copilot button in the ribbon -> Ask natural language questions about your data.
 
 ---
 

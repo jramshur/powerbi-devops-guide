@@ -10,7 +10,7 @@ Forget the command line for a second. Here is what Git actually *does*.
 
 | Git Concept | Power BI Equivalent |
 | :--- | :--- |
-| **Repository (Repo)** | The folder that holds your entire project history. Think of it as a super-powered "Folder" that remembers everything. |
+| **Repository (Repo)** | The folder that holds your entire project history. Think of it as a super-powered "Folder" that remembers everything. <br> **Important**: Keep this folder *outside* of OneDrive. [See why](./06-git-and-onedrive.md). |
 | **Commit** | A "Save Point." Unlike clicking Save in Desktop (which overwrites the file), a Commit saves a *snapshot* of the changes. You can always go back to this point. |
 | **Branch** | A parallel universe. You can create a branch called `new-visuals`, delete everything, and your `main` branch remains untouched. |
 | **Merge** | Combining two universes. Taking the changes from `new-visuals` and applying them to `main`. |

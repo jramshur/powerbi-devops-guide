@@ -1,25 +1,29 @@
 # AI-Assisted Power BI Development
 
-This guide explains how to leverage AI tools like **GitHub Copilot** within VS Code to accelerate your Power BI development workflow.
+This guide explores the three main ways to use AI in Power BI development, from standard code generation to full-blown agentic control.
 
-## Why use AI for Power BI?
+## The Three Approaches
 
-Writing TMDL (Tabular Model Definition Language) or DAX by hand can be verbose and error-prone. AI tools allow you to:
-- **Generate Boilerplate**: Instantly create measures, calculated columns, or table definitions.
-- **Explain Code**: Understand complex DAX inherited from other developers.
-- **Refactor**: Rename objects or optimize logic across multiple files instantly.
-- **Document**: Automatically generate descriptions for measures and tables.
+### 1. Code-First (VS Code Standard)
+Using GitHub Copilot Chat (including `@workspace` agents). This method treats your Power BI project as a collection of text files. It can answer questions about your implementation by reading the code (TMDL/DAX) and can write directly to your files, but it does not interact with the *running* data model.
 
-## Prerequisites
+### 2. Model-Connected (VS Code + MCP)
+Using the **Model Context Protocol (MCP)** to give AI direct access to your running model's metadata service. It connects to the Analysis Services engine (via Power BI Desktop) to understand deeper relationships, validate DAX against the schema, and perform architectural changes that text analysis alone might miss.
 
-1.  **VS Code** installed.
-2.  **GitHub Copilot** extension (and active subscription).
-3.  **Power BI Project (.pbip)** format (saved as TMDL).
+### 3. Native Copilot
+Using the built-in Microsoft Copilot features in Power BI Service and Desktop. Best for quick visuals and business-user questions.
 
-## Core Workflows
+---
+
+## Strategy 1: Code-First (The "Text-Based Agent")
+
+**Tooling**: VS Code + GitHub Copilot (Agnet).
+**Best for**: Writing measures, DAX patterns, and documenting code based on file context.
+
+### Core Workflows
 
 ### 1. Generating DAX & TMDL
-Instead of typing out the full measure definition, use the Chat view or inline chat (`Ctrl+I` / `Cmd+I`) to describe what you want.
+Instead of typing out the full measure definition, use the Chat view or inline chat (`Ctrl+I` / `Cmd+I`) to describe what you want. You can then accept the changes directly into your file.
 
 **Prompt:**
 > "Create a measure for 'Year over Year Sales Growth' using the 'Total Sales' measure."
@@ -53,6 +57,29 @@ Copilot excels at writing human-readable documentation for your data model.
 measure 'Net Sales' = ...
     description: "Calculates total sales minus returns. Used for executive reporting."
 ```
+
+## Strategy 2: Agentic (VS Code + MCP)
+
+**Tooling**: VS Code + Claude/Copilot + Power BI MCP Server.
+**Best for**: Deep model refactoring, semantic understanding, and "conversation with your data model".
+
+### How it differs
+Unlike the standard Copilot (which just guesses text), an MCP-enabled agent can:
+-   **Analyze the Model**: "List all measures that use the CALCULATE function."
+-   **Trace Dependencies**: "Show me what visuals will break if I delete the [Total Sales] measure."
+-   **Execute Changes**: "Rename 'Client' to 'Customer' everywhere and update the properties."
+
+*Note: This feature is rapidly evolving. Ensure you have the necessary MCP servers configured.*
+
+## Strategy 3: Native Copilot
+
+**Tooling**: Power BI Desktop / Service (Fabric Capacity required).
+**Best for**: Business users, rapid visual generation, and "explain this page".
+
+### Common Use Cases
+-   **"Summarize this report page"**: Generates a text narrative of the data.
+-   **"Create a page about Sales"**: automatically builds visuals.
+-   **DAX Query Generation**: In the DAX query view, ask it to write queries to inspect data.
 
 ## The "AI + DevOps" Workflow
 

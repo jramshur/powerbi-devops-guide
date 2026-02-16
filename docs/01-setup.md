@@ -13,6 +13,11 @@ Before you start version controlling your Power BI projects, you need to set up 
 - **GitHub Desktop**: If you prefer a GUI for Git operations.
 - **Tabular Editor 3 (or 2)**: For advanced model editing.
 
+> [!CAUTION]
+> **DO NOT put your Git repository inside OneDrive.**
+> OneDrive battles with Git for control of files, leading to sync errors, slow performance, and even repository corruption.
+> **[Read more about Git & OneDrive issues here](./06-git-and-onedrive.md).**
+
 ## 2. Power BI Desktop Configuration
 
 You must enable the **Power BI Project (.pbip)** save option.
